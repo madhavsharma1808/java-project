@@ -61,12 +61,12 @@ class Customer
             }
            
       static  void select(int prod_no,String category){
-          if(category.equalsIgnoreCase("Watches"))
+          if(category.equalsIgnoreCase("Car"))
           {
                 Car obj= new Car();
                 obj.remove(prod_no);
           }
-         else if(category.equalsIgnoreCase("Bags"))
+         else if(category.equalsIgnoreCase("Bike"))
          {
                 Bike obj1=new Bike();
                 obj1.remove(prod_no);

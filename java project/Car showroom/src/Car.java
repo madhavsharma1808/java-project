@@ -40,23 +40,22 @@ class Car extends Model
     void remove(int n)
     {
        
-        File inputFile = new File("car.txt");
-        File tempFile = new File("myTempFile.txt");
+        try{
+            File inputFile = new File("car.txt");
+            File tempFile = new File("myTempFile.txt");
+        } catch (Exception e) {
+            System.err.println(e);
+        }
         // File rr = new File("rrrr.txt");
 
 
         
-                boolean find=searchInStock(n, "remove");
-                if(find == false)
-                {
-                    System.out.println("Not Available!!");
-                }
-        
-      
-           
-        
-
-            
+        boolean find=searchInStock(n, "remove");
+        if(find == false)
+        {
+            System.out.println("Not Available!!");
+        }
+         
     }
     boolean searchInStock(int n,String purpose)
     {
